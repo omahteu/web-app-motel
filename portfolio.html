@@ -36,11 +36,10 @@
 			<div>
 				<ul type="None">
 					<li>
-						<p class="infos">Início: <span id="entrada"></span></p>
-						<p class="infos">Quarto: R$ <span id="valor-quarto"></span></p>
-						<p class="infos">Hora Add: 00:00:00</p>
-						<p class="infos" id="quarto"></p>
-						<p class="infos" id="tipo"><hp5>
+						<p class="infos">Entrada: <span id="entrada"></span></p>
+						<p class="infos">Quarto: R$ <span id="valor-quarto">0</span></p>
+						<p class="infos" id="quarto">0</p>
+						<p class="infos" id="tipo">0<hp5>
 					</li>
 				</ul>
 				<form>
@@ -93,19 +92,19 @@
 								<h3>AR</h3>
 								<h3 id="tempo">00:03:25</h3>
 								<h3 id="status" hidden>d</h3>
-								<button type="button" class="btn reservado" id="botaoq1" onclick="reservado(), btn_reserva()" data-toggle="tooltip" data-placement="top" title="RESERVAR"></button>
-								<button type="button" class="btn limpeza" id="botaoq1" onclick="limpeza(), btn_limpeza()"></button>
-								<button type="button" class="btn aguardando" id="botaoq1" onclick="aguardando(), btn_aguardando()"></button>
-								<button type="button" class="btn manutencao" id="botaoq1" onclick="manutencao(), btn_manutencao()"></button>
-								<button type="button" class="btn pernoite" id="botaoq1" onclick="pernoite()"></button>
-								<button type="button" class="btn locado" id="botaoq1" onclick="locado()"></button>
-								<button type="button" class="btn faxina" id="botaoq1" onclick="faxina()"></button>
-								<button type="button" class="btn disponivel" id="botaoq1" onclick="disponivel()"></button>
+								<button type="button" name="1" class="btn reservado" id="botaoq1"></button>
+								<button type="button" class="btn limpeza" id="botaoq1"></button>
+								<button type="button" class="btn aguardando" id="botaoq1"></button>
+								<button type="button" class="btn manutencao" id="botaoq1"></button>
+								<button type="button" class="btn pernoite" id="botaoq1"></button>
+								<button type="button" class="btn locado" id="botaoq1"></button>
+								<button type="button" class="btn faxina" id="botaoq1"></button>
+								<button type="button" class="btn disponivel" id="botaoq1"></button>
 							</div>
 						</a>
-						<input type="button" value="" id="fimquarto1" onclick="pernoite_desfaz()">
-						<input type="button" value="" id="a2" onclick="manutencao_desfaz()">
-						<input type="button" value="neutro" id="a3" onclick="btn_manutencaoa3()">
+						<input type="button" value="" id="a1">
+						<input type="button" value="" id="a2">
+						<input type="button" value="" id="a3">
 					</div>
 				</div>
 			</div>
@@ -137,6 +136,7 @@
 	<script src="paginas_js/locado.js"></script>
 	<script src="paginas_js/faxina.js"></script>
 	<script src="paginas_js/disponivel.js"></script>-->
+	<script src="paginas_js/index.js"></script>
 
 	</body>
 </html>
