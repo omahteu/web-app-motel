@@ -1,0 +1,24 @@
+.imagem {
+    width: 250px;
+    height: 250px;
+    background:url(‘images/img-13.jpg’);
+    opacity: 1;
+}
+.texto {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    text-align: center;
+    top: 200px;
+    width: 250px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.teste {
+    -webkit-border-radius: 125px;
+    border-radius: 125px;
+    background: #D1D8EC;
+    -webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+    box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+}
