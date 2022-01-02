@@ -39,6 +39,32 @@ $(".aguardando").click(function(){
     )
 })
 
+$(".manutencao").click(function(){
+    var quarto = $(this).attr('name')
+
+    // substituir o if por switch
+
+    if(quarto === '1'){
+        var box = modos.slice(0, 3)
+        manutencao(quarto, box[0], box[1], box[2])
+    } else (
+        console.log('maior')
+    )
+})
+
+$(".pernoite").click(function(){
+    var quarto = $(this).attr('name')
+
+    // substituir o if por switch
+
+    if(quarto === '1'){
+        var box = modos.slice(0, 3)
+        pernoite(quarto, box[0], box[1], box[2])
+    } else (
+        console.log('maior')
+    )
+})
+
 function reservado(q, x, y, z) {
     $("#quarto" + q).css({
         "background-color": "#1E90FF",
@@ -75,13 +101,13 @@ function limpeza(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    $(".pes").prop("disabled", true)
-    $(".cod").prop("disabled", true)
-    $(".des").prop("disabled", true)
-    $(".qtd").prop("disabled", true)
-    $(".vun").prop("disabled", true)
-    $(".ser").prop("disabled", true)
-    $(".tot").prop("disabled", true)
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
 }
 
 function aguardando(q, x, y, z) {
@@ -93,14 +119,49 @@ function aguardando(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    $(".pes").prop("disabled", true)
-    $(".cod").prop("disabled", true)
-    $(".des").prop("disabled", true)
-    $(".qtd").prop("disabled", true)
-    $(".vun").prop("disabled", true)
-    $(".ser").prop("disabled", true)
-    $(".tot").prop("disabled", true)
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
 }
 
 // necessário alterar o id, ou buscar pela class
 
+function manutencao(q, x, y, z) {
+    $("#quarto" + q).css({
+        "background-color": "#A9A9A9",
+        "opacity": 0.5})
+    
+    $("#tempo").css('margin-top', '-30px')
+
+    $("[id=botaoq" + q + "]").css('visibility', 'hidden')
+
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+}
+
+function pernoite(q, x, y, z) {
+    $("#quarto" + q).css({
+        "background-color": "#8B008B",
+        "opacity": 0.5})
+    
+    $("#tempo").css('margin-top', '-30px')
+
+    $("[id=botaoq" + q + "]").css('visibility', 'hidden')
+
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+}
