@@ -15,21 +15,19 @@ produtos = {
     }
 }
 
+var indexes = []
 
 for (const property in produtos) {
-console.log(property);
+    indexes.push(property)
 }
 
-var cidades = [
-    'São Paulo',
-    'Rio de Janeiro',
-    'Bahia'];
-
-cidades.forEach(function(item){
+indexes.forEach(function(item){
     $('.cod').append('<option>' + item + '</option>');
 });
 
-$('#myselect').change(function() {
-    var option = $('#myselect').find(":selected").index();
-    console.log(produtos[option]);
-    });
+$('.cod').change(function() {
+    var option = $('.cod').find(":selected").index();
+
+    $(".des").val(produtos[option]['descrição'])
+    $(".vun").val('R$ ' + produtos[option]['valor'])
+});
