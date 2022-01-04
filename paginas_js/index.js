@@ -140,6 +140,12 @@ function limpeza(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
+    // var horaEntrada = new Date();
+
+
+    // hora: horaEntrada.getHours(),
+    // minutos: horaEntrada.getMinutes()
+
     // $(".pes").prop("disabled", true)
     // $(".cod").prop("disabled", true)
     // $(".des").prop("disabled", true)
