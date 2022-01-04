@@ -113,6 +113,12 @@ function reservado(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
+    var horaEntrada = new Date();
+
+
+    var hora = horaEntrada.getHours()
+    var minutos = horaEntrada.getMinutes()
+
     // $(".pes").prop("disabled", true)
     // $(".cod").prop("disabled", true)
     // $(".des").prop("disabled", true)
@@ -129,6 +135,7 @@ function reservado(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('reservado')
+    $("#entrada").text(String(hora) + ':' + String(minutos))
 }
 
 function limpeza(q, x, y, z) {
@@ -139,12 +146,6 @@ function limpeza(q, x, y, z) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    // var horaEntrada = new Date();
-
-
-    // hora: horaEntrada.getHours(),
-    // minutos: horaEntrada.getMinutes()
 
     // $(".pes").prop("disabled", true)
     // $(".cod").prop("disabled", true)
