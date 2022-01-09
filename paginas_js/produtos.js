@@ -32,9 +32,9 @@ $('.cod').change(function() {
     $(".vun").val('R$ ' + produtos[option]['valor'])
 
     $('.qtd').keyup(function(){
-        var qtd = $(".qtd").val()
+        var qtd = $(this).val()
         var total = Number(produtos[option]['valor']) * Number(qtd)
-        $(".tot").val(total)
+        $(".tot").val('R$ ' + total)
     
     });
 });
