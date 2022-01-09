@@ -30,4 +30,11 @@ $('.cod').change(function() {
 
     $(".des").val(produtos[option]['descrição'])
     $(".vun").val('R$ ' + produtos[option]['valor'])
+
+    $('.qtd').keyup(function(){
+        var qtd = $(".qtd").val()
+        var total = Number(produtos[option]['valor']) * Number(qtd)
+        $(".tot").val(total)
+    
+    });
 });
