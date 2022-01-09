@@ -128,10 +128,13 @@ function reservado(q, x, y, z) {
     // $(".tot").prop("disabled", true)
 
     $("#" + x).css('visibility', 'visible')
-    $("#" + x).val('Iniciar')
+    $("#" + x).val('Alterar P/ Pernoite')
 
     $("#" + y).css('visibility', 'visible')
-    $("#" + y).val('Encerrar')
+    $("#" + y).val('Alterar P/ Locação')
+
+    $("#" + z).css('visibility', 'visible')
+    $("#" + z).val('Cancelar Reserva')
 
     $("#quarto").text(q)
     $("#tipo").text('reservado')
@@ -155,6 +158,15 @@ function limpeza(q, x, y, z) {
     // $(".ser").prop("disabled", true)
     // $(".tot").prop("disabled", true)
 
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Disponibilizar Quarto')
+
+    // $("#" + y).css('visibility', 'visible')
+    // $("#" + y).val('Alterar P/ Locação')
+
+    // $("#" + z).css('visibility', 'visible')
+    // $("#" + z).val('Cancelar Reserva')
+
     $("#quarto").text(q)
     $("#tipo").text('limpeza')
 }
@@ -175,6 +187,15 @@ function aguardando(q, x, y, z) {
     // $(".vun").prop("disabled", true)
     // $(".ser").prop("disabled", true)
     // $(".tot").prop("disabled", true)
+
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Iniciar Limpeza')
+
+    // $("#" + y).css('visibility', 'visible')
+    // $("#" + y).val('Alterar P/ Locação')
+
+    // $("#" + z).css('visibility', 'visible')
+    // $("#" + z).val('Cancelar Reserva')
 
     $("#quarto").text(q)
     $("#tipo").text('aguardando')
@@ -199,6 +220,15 @@ function manutencao(q, x, y, z) {
     // $(".ser").prop("disabled", true)
     // $(".tot").prop("disabled", true)
 
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Iniciar Faxina')
+
+    $("#" + y).css('visibility', 'visible')
+    $("#" + y).val('Disponibilizar Quarto')
+
+    $("#" + z).css('visibility', 'visible')
+    $("#" + z).val('Ligar Luz')
+
     $("#quarto").text(q)
     $("#tipo").text('manutencao')
 }
@@ -220,6 +250,15 @@ function pernoite(q, x, y, z) {
     // $(".ser").prop("disabled", true)
     // $(".tot").prop("disabled", true)
 
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Alterar P/ Locação')
+
+    $("#" + y).css('visibility', 'visible')
+    $("#" + y).val('Encerrar')
+
+    // $("#" + z).css('visibility', 'visible')
+    // $("#" + z).val('Cancelar Reserva')
+
     $("#quarto").text(q)
     $("#tipo").text('pernoite')
 }
@@ -233,13 +272,22 @@ function locado(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    $(".pes").prop("disabled", true)
-    $(".cod").prop("disabled", true)
-    $(".des").prop("disabled", true)
-    $(".qtd").prop("disabled", true)
-    $(".vun").prop("disabled", true)
-    $(".ser").prop("disabled", true)
-    $(".tot").prop("disabled", true)
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Alterar P/ Pernoite')
+
+    $("#" + y).css('visibility', 'visible')
+    $("#" + y).val('Encerrar')
+
+    // $("#" + z).css('visibility', 'visible')
+    // $("#" + z).val('Cancelar Reserva')
 
     $("#quarto").text(q)
     $("#tipo").text('locado')
@@ -254,13 +302,22 @@ function faxina(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    $(".pes").prop("disabled", true)
-    $(".cod").prop("disabled", true)
-    $(".des").prop("disabled", true)
-    $(".qtd").prop("disabled", true)
-    $(".vun").prop("disabled", true)
-    $(".ser").prop("disabled", true)
-    $(".tot").prop("disabled", true)
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Disponibilizar Quarto')
+
+    // $("#" + y).css('visibility', 'visible')
+    // $("#" + y).val('Alterar P/ Locação')
+
+    // $("#" + z).css('visibility', 'visible')
+    // $("#" + z).val('Cancelar Reserva')
 
     $("#quarto").text(q)
     $("#tipo").text('faxina')

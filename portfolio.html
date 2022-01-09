@@ -56,16 +56,19 @@
 					<input type="text" class="tot" placeholder="Total">
 				</form>
 
-				<button data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Adicionais</button>
+				<button id="guardar" data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Adicionais</button>
 				<form class="mt-3 collapse review-form-box" id="formLogin">
+
 					<div class="form-row">
-						
+						<select class="form-control">
+							<option hidden>Veículo</option>
+							<option>Carro</option>
+							<option>Moto</option>
+						</select>
 						<input type="text" class="form-control" id="InputEmail" placeholder="Modelo">		
 						<input type="text" class="form-control" id="InputPassword" placeholder="Placa">
 						<button type="submit" class="btn hvr-hover">Login</button>
-						
 					</div>
-					
 				</form>
 
 				<input type="button" id="guardar" value="Salvar">
@@ -164,6 +167,7 @@
 	<script src="paginas_js/disponivel.js"></script>-->
 	<script src="paginas_js/index.js"></script>
 	<script src="paginas_js/produtos.js"></script>
+	<script src="paginas_js/box.js"></script>
 
 	</body>
 </html>
