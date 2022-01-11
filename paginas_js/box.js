@@ -105,6 +105,36 @@ function locadx(q, x, y, z) {
     $("#tipo").text('locado')
 }
 
+function limpezx(q, x, y, z) {
+    $("#quarto" + q).css({
+        "background-color": "#F0E68C",
+        "opacity": 0.5})
+    
+    $("#tempo").css('margin-top', '-30px')
+
+    $("[id=botaoq" + q + "]").css('visibility', 'hidden')
+
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Disponibilizar Quarto')
+
+    // $("#" + y).css('visibility', 'visible')
+    // $("#" + y).val('Alterar P/ Locação')
+
+    // $("#" + z).css('visibility', 'visible')
+    // $("#" + z).val('Cancelar Reserva')
+
+    $("#quarto").text(q)
+    $("#tipo").text('limpeza')
+}
+
 function triagem(acao, quarto, x, y, z){
 
     switch(acao){
@@ -122,6 +152,9 @@ function triagem(acao, quarto, x, y, z){
             break
         case "Alterar P/ Locação":
             locadx(quarto, x, y, z)
+            break
+        case "Iniciar Limpeza":
+            limpezx(quarto, x, y, z)
             break
     }
 }
