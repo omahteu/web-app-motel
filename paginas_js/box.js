@@ -135,6 +135,36 @@ function limpezx(q, x, y, z) {
     $("#tipo").text('limpeza')
 }
 
+function faxinx(q, x, y, z) {
+    $("#quarto" + q).css({
+        "background-color": "#FFE4C4",
+        "opacity": 0.5})
+    
+    $("#tempo").css('margin-top', '-30px')
+
+    $("[id=botaoq" + q + "]").css('visibility', 'hidden')
+
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Disponibilizar Quarto')
+
+    $("#" + y). removeAttr('style')
+    $("#" + y).val('')
+
+    $("#" + z). removeAttr('style')
+    $("#" + z).val('')
+
+    $("#quarto").text(q)
+    $("#tipo").text('faxina')
+}
+
 function triagem(acao, quarto, x, y, z){
 
     switch(acao){
@@ -156,5 +186,10 @@ function triagem(acao, quarto, x, y, z){
         case "Iniciar Limpeza":
             limpezx(quarto, x, y, z)
             break
+        case "Iniciar Faxina":
+            faxinx(quarto, x, y, z)
+            break
     }
 }
+
+// configurar botão de ligar/desligar luz
