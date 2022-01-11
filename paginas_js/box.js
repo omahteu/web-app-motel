@@ -68,11 +68,41 @@ function pernoitx(q, x, y, z) {
     $("#" + y).css('visibility', 'visible')
     $("#" + y).val('Encerrar')
 
-    // $("#" + z).css('visibility', 'visible')
-    // $("#" + z).val('Cancelar Reserva')
+    $("#" + z). removeAttr('style')
+    $("#" + z).val('')
 
     $("#quarto").text(q)
     $("#tipo").text('pernoite')
+}
+
+function locadx(q, x, y, z) {
+    $("#quarto" + q).css({
+        "background-color": "#FF0000",
+        "opacity": 0.5})
+    
+    $("#tempo").css('margin-top', '-30px')
+
+    $("[id=botaoq" + q + "]").css('visibility', 'hidden')
+
+    // $(".pes").prop("disabled", true)
+    // $(".cod").prop("disabled", true)
+    // $(".des").prop("disabled", true)
+    // $(".qtd").prop("disabled", true)
+    // $(".vun").prop("disabled", true)
+    // $(".ser").prop("disabled", true)
+    // $(".tot").prop("disabled", true)
+
+    $("#" + x).css('visibility', 'visible')
+    $("#" + x).val('Alterar P/ Pernoite')
+
+    $("#" + y).css('visibility', 'visible')
+    $("#" + y).val('Encerrar')
+
+    $("#" + z). removeAttr('style')
+    $("#" + z).val('')
+
+    $("#quarto").text(q)
+    $("#tipo").text('locado')
 }
 
 function triagem(acao, quarto, x, y, z){
@@ -90,6 +120,8 @@ function triagem(acao, quarto, x, y, z){
         case "Alterar P/ Pernoite":
             pernoitx(quarto, x, y, z)
             break
+        case "Alterar P/ Locação":
+            locadx(quarto, x, y, z)
+            break
     }
-
 }
