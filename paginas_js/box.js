@@ -5,6 +5,7 @@ modos = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6']
 $("#" + modos[0]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
+    console.log($("#intervalo").text())
 
     triagem(acao, quarto, 'a1', 'a2', 'a3')
 })
@@ -54,14 +55,6 @@ function pernoitx(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
-
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Locação')
 
@@ -83,14 +76,6 @@ function locadx(q, x, y, z) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Pernoite')
@@ -114,14 +99,6 @@ function limpezx(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
-
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Disponibilizar Quarto')
 
@@ -143,14 +120,6 @@ function faxinx(q, x, y, z) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Disponibilizar Quarto')

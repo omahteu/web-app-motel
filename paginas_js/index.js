@@ -7,6 +7,7 @@ $(".reservado").click(function(){
 
     if(quarto === '1'){
         var box = modos.slice(0, 3)
+        $("#intervalo").text(modos.slice(0, 3))
         reservado(quarto, box[0], box[1], box[2])
     } else (
         console.log('maior')
