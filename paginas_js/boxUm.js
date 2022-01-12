@@ -1,12 +1,11 @@
-modos = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6']
-
-// criar uma forma de passar o intervalo para cá
+modos = ['a1', 'a2', 'a3']
 
 $("#" + modos[0]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
     var modus = $("#intervalo").text().split(",")
     triagem(acao, quarto, modus[0], modus[1], modus[2])
+    
 })
 
 $("#" + modos[1]).click(function(){
@@ -158,6 +157,3 @@ function triagem(acao, quarto, x, y, z){
             break
     }
 }
-
-// configurar botão de ligar/desligar luz
-

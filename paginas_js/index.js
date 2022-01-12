@@ -1,4 +1,6 @@
-modos = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6']
+modos = ['a1', 'a2', 'a3']
+modosDois = ['a4', 'a5', 'a6']
+
 
 $(".reservado").click(function(){
     var quarto = $(this).attr('name')
@@ -9,8 +11,8 @@ $(".reservado").click(function(){
             reservado(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            reservado(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            reservado(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -24,8 +26,8 @@ $(".limpeza").click(function(){
             limpeza(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            limpeza(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            limpeza(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -39,8 +41,8 @@ $(".aguardando").click(function(){
             aguardando(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            aguardando(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            aguardando(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -54,8 +56,8 @@ $(".manutencao").click(function(){
             manutencao(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            manutencao(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            manutencao(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -69,8 +71,8 @@ $(".pernoite").click(function(){
             pernoite(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            pernoite(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            pernoite(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -84,8 +86,8 @@ $(".locado").click(function(){
             locado(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            locado(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            locado(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -99,8 +101,8 @@ $(".faxina").click(function(){
             faxina(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            faxina(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            faxina(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -111,11 +113,12 @@ $(".disponivel").click(function(){
     switch(quarto){
         case '1':
             var box = modos.slice(0, 3)
-            disponivel(quarto, box[0], box[1], box[2])
+            reservado(quarto, box[0], box[1], box[2])
             break
         case '2':
-            var box = modos.slice(3, 6)
-            disponivel(quarto, box[0], box[1], box[2])
+            var boxDois = modosDois.slice(0, 3)
+            console.log(boxDois)
+            reservado(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -195,8 +198,6 @@ function aguardando(q, x, y, z) {
     $("#tipo").text('aguardando')
     $("#intervalo").text(x + "," + y + "," + z)
 }
-
-// necessário alterar o id, ou buscar pela class
 
 function manutencao(q, x, y, z) {
     $("#quarto" + q).css({
