@@ -3,106 +3,121 @@ modos = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6']
 $(".reservado").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        $("#intervalo").text(modos.slice(0, 3))
-        reservado(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            reservado(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            reservado(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".limpeza").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        limpeza(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            limpeza(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            limpeza(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".aguardando").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        aguardando(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            aguardando(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            aguardando(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".manutencao").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        manutencao(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            manutencao(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            manutencao(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".pernoite").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        pernoite(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            pernoite(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            pernoite(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".locado").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        locado(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            locado(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            locado(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".faxina").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        faxina(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            faxina(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            faxina(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 $(".disponivel").click(function(){
     var quarto = $(this).attr('name')
 
-    // substituir o if por switch
-
-    if(quarto === '1'){
-        var box = modos.slice(0, 3)
-        disponivel(quarto, box[0], box[1], box[2])
-    } else (
-        console.log('maior')
-    )
+    switch(quarto){
+        case '1':
+            var box = modos.slice(0, 3)
+            disponivel(quarto, box[0], box[1], box[2])
+            break
+        case '2':
+            var box = modos.slice(3, 6)
+            disponivel(quarto, box[0], box[1], box[2])
+            break
+    }
 })
 
 function reservado(q, x, y, z) {
@@ -120,14 +135,6 @@ function reservado(q, x, y, z) {
     var hora = horaEntrada.getHours()
     var minutos = horaEntrada.getMinutes()
 
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
-
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Pernoite')
 
@@ -140,6 +147,7 @@ function reservado(q, x, y, z) {
     $("#quarto").text(q)
     $("#tipo").text('reservado')
     $("#entrada").text(String(hora) + ':' + String(minutos))
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
 function limpeza(q, x, y, z) {
@@ -150,14 +158,6 @@ function limpeza(q, x, y, z) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Disponibilizar Quarto')
@@ -170,6 +170,7 @@ function limpeza(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('limpeza')
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
 function aguardando(q, x, y, z) {
@@ -180,14 +181,6 @@ function aguardando(q, x, y, z) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Iniciar Limpeza')
@@ -200,6 +193,7 @@ function aguardando(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('aguardando')
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
 // necessário alterar o id, ou buscar pela class
@@ -213,14 +207,6 @@ function manutencao(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
-
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Iniciar Faxina')
 
@@ -232,6 +218,7 @@ function manutencao(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('manutencao')
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
 function pernoite(q, x, y, z) {
@@ -243,13 +230,13 @@ function pernoite(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
+    var horaEntrada = new Date();
+
+
+    var hora = horaEntrada.getHours()
+    var minutos = horaEntrada.getMinutes()
+
+    $("#entrada").text(String(hora) + ':' + String(minutos))
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Locação')
@@ -262,6 +249,7 @@ function pernoite(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('pernoite')
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
 function locado(q, x, y, z) {
@@ -273,13 +261,13 @@ function locado(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
+    var horaEntrada = new Date();
+
+
+    var hora = horaEntrada.getHours()
+    var minutos = horaEntrada.getMinutes()
+
+    $("#entrada").text(String(hora) + ':' + String(minutos))
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Pernoite')
@@ -292,6 +280,7 @@ function locado(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('locado')
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
 function faxina(q, x, y, z) {
@@ -302,14 +291,6 @@ function faxina(q, x, y, z) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    // $(".pes").prop("disabled", true)
-    // $(".cod").prop("disabled", true)
-    // $(".des").prop("disabled", true)
-    // $(".qtd").prop("disabled", true)
-    // $(".vun").prop("disabled", true)
-    // $(".ser").prop("disabled", true)
-    // $(".tot").prop("disabled", true)
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Disponibilizar Quarto')
@@ -322,9 +303,10 @@ function faxina(q, x, y, z) {
 
     $("#quarto").text(q)
     $("#tipo").text('faxina')
+    $("#intervalo").text(x + "," + y + "," + z)
 }
 
-function disponivel(q, x, y, zv) {
+function disponivel(q, x, y, z) {
     $("#quarto" + q).css({
         "background-color": "#008B8B",
         "opacity": 0.5})
@@ -332,14 +314,6 @@ function disponivel(q, x, y, zv) {
     $("#tempo").css('margin-top', '-30px')
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
-
-    $(".pes").prop("disabled", true)
-    $(".cod").prop("disabled", true)
-    $(".des").prop("disabled", true)
-    $(".qtd").prop("disabled", true)
-    $(".vun").prop("disabled", true)
-    $(".ser").prop("disabled", true)
-    $(".tot").prop("disabled", true)
 
     $("#quarto").text(q)
     $("#tipo").text('disponivel')

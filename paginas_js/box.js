@@ -5,24 +5,22 @@ modos = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6']
 $("#" + modos[0]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
-    console.log($("#intervalo").text())
-
-    triagem(acao, quarto, 'a1', 'a2', 'a3')
+    var modus = $("#intervalo").text().split(",")
+    triagem(acao, quarto, modus[0], modus[1], modus[2])
 })
 
 $("#" + modos[1]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
-
-    triagem(acao, quarto, 'a1', 'a2', 'a3')
+    var modus = $("#intervalo").text().split(",")
+    triagem(acao, quarto, modus[0], modus[1], modus[2])
 })
 
 $("#" + modos[2]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
-
-    triagem(acao, quarto, 'a1', 'a2', 'a3')
-    
+    var modus = $("#intervalo").text().split(",")
+    triagem(acao, quarto, modus[0], modus[1], modus[2])
 })
 
 function desfazer(q, x, y, z) {
@@ -43,7 +41,7 @@ function desfazer(q, x, y, z) {
     $("#tipo").text('0')
     $("#entrada").text('')
     $("#valor-quarto").text('0')
-
+    $("#intervalo").text("0")
 }
 
 function pernoitx(q, x, y, z) {
@@ -162,3 +160,4 @@ function triagem(acao, quarto, x, y, z){
 }
 
 // configurar botão de ligar/desligar luz
+
