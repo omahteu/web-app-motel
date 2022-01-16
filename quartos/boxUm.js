@@ -36,6 +36,7 @@ function desfazer(q, x, y, z) {
     $("#" + z). removeAttr('style')
     $("#" + z).val('')
 
+    $("#tempo").text("00:00:00")
     $("#quarto").text('0')
     $("#tipo").text('0')
     $("#entrada").text('')

@@ -113,12 +113,12 @@ $(".disponivel").click(function(){
     switch(quarto){
         case '1':
             var box = modos.slice(0, 3)
-            reservado(quarto, box[0], box[1], box[2])
+            disponivel(quarto, box[0], box[1], box[2])
             break
         case '2':
             var boxDois = modosDois.slice(0, 3)
             console.log(boxDois)
-            reservado(quarto, boxDois[0], boxDois[1], boxDois[2])
+            disponivel(quarto, boxDois[0], boxDois[1], boxDois[2])
             break
     }
 })
@@ -133,10 +133,9 @@ function reservado(q, x, y, z) {
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
     var horaEntrada = new Date();
-
-
     var hora = horaEntrada.getHours()
     var minutos = horaEntrada.getMinutes()
+    $("[id=tempo]").text(String(hora) + ':' + String(minutos))
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Pernoite')
@@ -232,12 +231,9 @@ function pernoite(q, x, y, z) {
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
     var horaEntrada = new Date();
-
-
     var hora = horaEntrada.getHours()
     var minutos = horaEntrada.getMinutes()
-
-    $("#entrada").text(String(hora) + ':' + String(minutos))
+    $("[id=tempo]").text(String(hora) + ':' + String(minutos))
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Locação')
@@ -263,12 +259,9 @@ function locado(q, x, y, z) {
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
     var horaEntrada = new Date();
-
-
     var hora = horaEntrada.getHours()
     var minutos = horaEntrada.getMinutes()
-
-    $("#entrada").text(String(hora) + ':' + String(minutos))
+    $("[id=tempo]").text(String(hora) + ':' + String(minutos))
 
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Alterar P/ Pernoite')

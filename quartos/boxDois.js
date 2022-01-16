@@ -1,6 +1,6 @@
-modos = ['a4', 'a5', 'a6']
+modosDois = ['a4', 'a5', 'a6']
 
-$("#" + modos[0]).click(function(){
+$("#" + modosDois[0]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
     var modus = $("#intervalo").text().split(",")
@@ -8,14 +8,14 @@ $("#" + modos[0]).click(function(){
     
 })
 
-$("#" + modos[1]).click(function(){
+$("#" + modosDois[1]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
     var modus = $("#intervalo").text().split(",")
     triagem(acao, quarto, modus[0], modus[1], modus[2])
 })
 
-$("#" + modos[2]).click(function(){
+$("#" + modosDois[2]).click(function(){
     var quarto = $("#quarto").text()
     var acao = $(this).val()
     var modus = $("#intervalo").text().split(",")
@@ -35,7 +35,8 @@ function desfazer(q, x, y, z) {
 
     $("#" + z). removeAttr('style')
     $("#" + z).val('')
-
+    
+    $("[id=tempo]").text("00:00:00")
     $("#quarto").text('0')
     $("#tipo").text('0')
     $("#entrada").text('')
