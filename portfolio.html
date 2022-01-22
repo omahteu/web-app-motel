@@ -47,7 +47,7 @@
 					<input type="number" min="0" class="pes" placeholder="Pessoas" >
 					<input type="text" class="obs" placeholder="Observações" >
 				</form>
-				<form>
+				<form id="produtos">
 					<select class="cod">
 						<option hidden></option>
 					</select>
@@ -61,14 +61,14 @@
 				<form class="mt-3 collapse review-form-box" id="formLogin">
 
 					<div class="form-row">
-						<select class="form-control">
+						<select class="form-control" id="tipoVeiculo">
 							<option hidden>Veículo</option>
 							<option>Carro</option>
 							<option>Moto</option>
 						</select>
-						<input type="text" class="form-control" id="InputEmail" placeholder="Modelo">		
-						<input type="text" class="form-control" id="InputPassword" placeholder="Placa">
-						<input type="button" class="btn hvr-hover" value="LOgin">
+						<input type="text" class="form-control" id="modelo" placeholder="Modelo">		
+						<input type="text" class="form-control" id="placa" placeholder="Placa">
+						<input type="button" id="guardara" value="Guardar">
 					</div>
 
 					<table class="table">
@@ -79,17 +79,18 @@
 								<th>Placa</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody class="garagem">
 
 						</tbody>
 					</table>
 				</form>
 
-				<input type="button" id="guardar" value="Salvar">
+				<input type="button" id="salvar" value="Salvar">
 
 				<table class="table">
 					<thead>
 						<tr>
+							<th>Qrt</th>
 							<th>Cod</th>
 							<th>Desc</th>
 							<th>Qtd</th>
@@ -97,7 +98,7 @@
 							<th>Total</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="listaprodutos">
 
 					</tbody>
 				</table>
@@ -108,7 +109,7 @@
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Quartos</h2>
 				<div class="row row-bottom-padded-md">
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
+					<div class="col-md-3 col-sm-6 col-padding text-center animate-box" id="qr">
 						<a href="#" class="work image-popup" style="background-image: url(images/img-11.jpg);">
 							<div class="desc" id="quarto1">
 								<h3>AR</h3>
@@ -169,6 +170,8 @@
 	<script src="js/main.js"></script>
 
 	<script src="paginas_js/produtos.js"></script>
+	<script src="paginas_js/armazenamento.js"></script>
+	<script src="paginas_js/listagem.js"></script>
 	<!-- QUARTOS -->
 	<script src="quartos/index.js"></script>
 	<script src="quartos/boxUm.js"></script>
