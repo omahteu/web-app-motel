@@ -115,14 +115,14 @@
 								<h3>AR</h3>
 								<h3 id="tempo">00:00:00</h3>
 								<h3 id="status" hidden>d</h3>
-								<button type="button" name="1" class="btn reservado" id="botaoq1"></button>
-								<button type="button" name="1" class="btn limpeza" id="botaoq1"></button>
-								<button type="button" name="1" class="btn aguardando" id="botaoq1"></button>
-								<button type="button" name="1" class="btn manutencao" id="botaoq1"></button>
-								<button type="button" name="1" class="btn pernoite" id="botaoq1"></button>
-								<button type="button" name="1" class="btn locado" id="botaoq1"></button>
-								<button type="button" name="1" class="btn faxina" id="botaoq1"></button>
-								<button type="button" name="1" class="btn disponivel" id="botaoq1"></button>
+								<button type="button" name="1" id="botaoq1" class="btn reservado"></button>
+								<button type="button" name="1" id="botaoq1" class="btn limpeza"></button>
+								<button type="button" name="1" id="botaoq1" class="btn aguardando"></button>
+								<button type="button" name="1" id="botaoq1" class="btn manutencao"></button>
+								<button type="button" name="1" id="botaoq1" class="btn pernoite"></button>
+								<button type="button" name="1" id="botaoq1" class="btn locado"></button>
+								<button type="button" name="1" id="botaoq1" class="btn faxina"></button>
+								<button type="button" name="1" id="botaoq1" class="btn disponivel"></button>
 							</div>
 						</a>
 						<input type="button" value="" id="a1">
@@ -172,10 +172,18 @@
 	<script src="paginas_js/produtos.js"></script>
 	<script src="paginas_js/armazenamento.js"></script>
 	<script src="paginas_js/listagem.js"></script>
-	<!-- QUARTOS -->
-	<script src="quartos/index.js"></script>
-	<script src="quartos/boxUm.js"></script>
-	<script src="quartos/boxDois.js"></script>
+
+	<script type="module" src="botoes/botaoReserva.js"></script>
+	<script type="module" src="botoes/botaoLimpeza.js"></script>
+	<script type="module" src="botoes/botaoAguardo.js"></script>
+	<script type="module" src="botoes/botaoManutencao.js"></script>
+	<script type="module" src="botoes/botaoPernoite.js"></script>
+	<script type="module" src="botoes/botaoLocado.js"></script>
+	<script type="module" src="botoes/botaoFaxina.js"></script>
+
+
+	<script type="module" src="acoes/acaoQuartoUm.js"></script>
+	<script type="module" src="acoes/acaoQuartoDois.js"></script>
 
 	</body>
 </html>
