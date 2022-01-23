@@ -8,13 +8,20 @@ export function triagem(acao, quarto, x, y, z){
 
     switch(acao){
         case "Disponibilizar Quarto":
+            confirm("Certeza que deseja encerrar" + quarto + "?")
             desfazer(quarto, x, y, z)
             break
         case "Cancelar Reserva":
             desfazer(quarto, x, y, z)
             break
         case "Encerrar":
-            desfazer(quarto, x, y, z)
+
+            if (confirm("Deseja encerrar o quarto " + quarto + "?") == true) {
+                desfazer(quarto, x, y, z)
+              } else {
+                // pass
+              }
+
             break
         case "Alterar P/ Pernoite":
             pernoite(quarto, x, y, z)
