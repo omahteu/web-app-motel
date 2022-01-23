@@ -1,4 +1,5 @@
 import { mostraPrateleira } from "../armazenamento/exibicao.js"
+import { mostraGaragem } from "../armazenamento/exibicao.js"
 
 
 $("#quarto1").mousedown(function(){
@@ -15,9 +16,11 @@ $("#quarto1").mousedown(function(){
 	} else {
 		if(tipos.includes(tipo)){
 			mostraPrateleira(quarto)
+			mostraGaragem(quarto)
 		} else (
 			console.log('')
 		)
 	}
-
 });
+
+// FAZER VERIFICAÇÃO DE ESTÁ PERNOITE OU LOCADO

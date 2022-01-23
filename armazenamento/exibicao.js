@@ -20,7 +20,7 @@ export function mostraPrateleira(numeroQuarto){
 										  '<td>'+ quantidade + '</td>' +
 										  '<td>'+ valorUnitario + '</td>' +
 										  '<td>'+ valorTotal + '</td>' +
-		 							 	  '<td><button onclick="removeVeiculo(\''+ quarto +'\')" class="btn btn-danger">Remover</button></td>'+
+		 							 	  '<td><button onclick="removeProduto(\''+ quarto +'\')" class="btn btn-danger">Remover</button></td>'+
 		 							 '</tr>';
 	}
 }
