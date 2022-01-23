@@ -139,7 +139,7 @@ function triagem(acao, quarto, x, y, z){
             desfazer(quarto, x, y, z)
             break
         case "Cancelar Reserva":
-            desfazer(quarto, x, y, z)
+            // desfazer(quarto, x, y, z)
             break
         case "Encerrar":
             desfazer(quarto, x, y, z)
