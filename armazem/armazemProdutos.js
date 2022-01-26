@@ -1,8 +1,14 @@
 $("#salvar").click(function(){
-	registroProduto()
-});
+	var tipos = ['pernoite', 'locado']
+	var tipo = $("#tipo").text()
 
+	if(tipos.includes(tipo)){
+		registroProduto()
+	} else (
+		alert('Selecione um quarto em modo Pernoite ou Locação!')
+	)
 
+})
 
 function gera_id(){
 	var size = 3
@@ -44,8 +50,6 @@ function registroProduto(){
 	mostraProduto();
 }
 
-
-
 function removeProduto(operacao){
 	var patio = JSON.parse(localStorage.getItem('produtos'));
 
@@ -60,8 +64,6 @@ function removeProduto(operacao){
 	mostraProduto();
 }
 
-
-
 function mostraProduto(){
 	var dados_produtos = JSON.parse(localStorage.getItem('produtos'))
 	var prateleira = document.getElementById('lprodutos');
@@ -75,8 +77,8 @@ function mostraProduto(){
 		var codigo = dados_produtos[i].codigo
 		var descricao = dados_produtos[i].descricao
 		var quantidade = dados_produtos[i].quantidade
-		var valorUnitario = dados_produtos[i].valorUnitario
-		var valorTotal = dados_produtos[i].valorTotal
+		var valorUnitario = dados_produtos[i].valor_unitario
+		var valorTotal = dados_produtos[i].valor_total
 
 		prateleira.innerHTML += '<tr><td hidden>'+ operacao + '</td>'+
 		 							'<td>'+ quarto + '</td>' +
@@ -89,5 +91,3 @@ function mostraProduto(){
 		 						'</tr>';
 	}
 }
-
-

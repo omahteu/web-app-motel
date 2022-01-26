@@ -1,5 +1,12 @@
 $("#guardara").click(function(){
-	registroVeiculo()
+    var tipos = ['pernoite', 'locado']
+	var tipo = $("#tipo").text()
+
+	if(tipos.includes(tipo)){
+		registroVeiculo()
+	} else (
+		alert('Selecione um quarto em modo Pernoite ou Locação!')
+	)
 })
 
 function registroVeiculo(){
