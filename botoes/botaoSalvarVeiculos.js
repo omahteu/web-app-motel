@@ -1,4 +1,4 @@
-import { registrarVeiculos } from "../armazenamento/registros.js"
+// import { registrarVeiculos } from "../armazenamento/registros.js"
 
 $("#guardara").click(function(){
     var tipos = ['pernoite', 'locado']

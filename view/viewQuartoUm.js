@@ -1,5 +1,5 @@
-import { mostraPrateleira } from "../armazenamento/exibicao.js"
-import { mostraGaragem } from "../armazenamento/exibicao.js"
+// import { mostraPrateleira } from "../armazenamento/exibicao.js"
+// import { mostraGaragem } from "../armazenamento/exibicao.js"
 
 
 $("#quarto1").mousedown(function(){

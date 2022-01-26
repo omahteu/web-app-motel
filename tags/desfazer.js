@@ -19,6 +19,6 @@ export function desfazer(q, x, y, z) {
     $("#valor-quarto").text('0')
     $("#intervalo").text("0")
 
-    var prateleiraResultado = document.getElementById('listaprodutos')
+    var prateleiraResultado = document.getElementById('lprodutos')
 	prateleiraResultado.innerHTML = '';
 }

@@ -1,4 +1,4 @@
-import { registrarProdutos } from "../armazenamento/registros.js"
+// import { registrarProdutos } from "../armazenamento/registros.js"
 
 $("#salvar").click(function(){
 	var tipos = ['pernoite', 'locado']
