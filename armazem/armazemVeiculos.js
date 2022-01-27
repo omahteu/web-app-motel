@@ -9,6 +9,12 @@ $("#guardara").click(function(){
 	)
 })
 
+function gera_id(){
+	var size = 3
+	var randomized = Math.ceil(Math.random() * Math.pow(10,size))
+	return randomized
+}
+
 function registroVeiculo(){
 
 	var quarto =  $("#quarto").text()
@@ -17,13 +23,12 @@ function registroVeiculo(){
     var placa = $("#placa").val()
 
 	var patio = {
+		operacao: gera_id(),
 		quarto: quarto,
 		veiculo: veiculo,
 		modelo: modelo,
 		placa: placa
     }
-
-	console.log(patio)
 
 	if(localStorage.getItem('garagem') === null){
 		var patios = [];
@@ -41,11 +46,11 @@ function registroVeiculo(){
 
 }
 
-function removeVeiculo(placa){
+function removeVeiculo(operacao){
 	var patio = JSON.parse(localStorage.getItem('garagem'))
 
 	 for(var i = 0 ; i < patio.length; i++){
-		if(patio[i].placa == placa){
+		if(patio[i].operacao == operacao){
 			patio.splice(i, 1);
 		}
 	}
@@ -57,22 +62,27 @@ function removeVeiculo(placa){
 
 function mostraVeiculo(){
 
+	var nuQuarto =  $("#quarto").text()
 	var dados_garagem = JSON.parse(localStorage.getItem('garagem'))
 	var patio = document.getElementById('garagem')
 	patio.innerHTML = ''
 
-	for(var i = 0; i < dados_garagem.length; i++){
+	var dados = dados_garagem.filter(quartos => quartos.quarto == nuQuarto)
 
-		var quarto =  dados_garagem[i].quarto
-		var veiculo =  dados_garagem[i].veiculo
-		var modelo = dados_garagem[i].modelo
-		var placa = dados_garagem[i].placa
+	for(var i = 0; i < dados.length; i++){
 
-		patio.innerHTML += '<tr><td hidden>'+ quarto + '</td>'+
+		var quarto =  dados[i].quarto
+		var veiculo =  dados[i].veiculo
+		var modelo = dados[i].modelo
+		var placa = dados[i].placa
+		var operacao = dados[i].operacao
+
+		patio.innerHTML += '<tr><td>'+ quarto + '</td>'+
 		 						'<td>'+ veiculo + '</td>' +
 								'<td>'+ modelo + '</td>' +
 								'<td>'+ placa + '</td>' +
-		 						'<td><button onclick="removeVeiculo('+ placa +')" class="btn btn-danger">Remover</button></td>'+
+								'<td hidden>'+ operacao + '</td>'+
+		 						'<td><button onclick="removeVeiculo('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
 		 					'</tr>';
 	}
 }

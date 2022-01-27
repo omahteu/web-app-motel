@@ -1,5 +1,29 @@
-// import { mostraPrateleira } from "../armazenamento/exibicao.js"
-// import { mostraGaragem } from "../armazenamento/exibicao.js"
+function mostraVeiculo(){
+
+	var nuQuarto =  $("#quarto").text()
+	var dados_garagem = JSON.parse(localStorage.getItem('garagem'))
+	var patio = document.getElementById('garagem')
+	patio.innerHTML = ''
+
+	var dados = dados_garagem.filter(quartos => quartos.quarto == nuQuarto)
+
+	for(var i = 0; i < dados.length; i++){
+
+		var quarto =  dados[i].quarto
+		var veiculo =  dados[i].veiculo
+		var modelo = dados[i].modelo
+		var placa = dados[i].placa
+		var operacao = dados[i].operacao
+
+		patio.innerHTML += '<tr><td>'+ quarto + '</td>'+
+		 						'<td>'+ veiculo + '</td>' +
+								'<td>'+ modelo + '</td>' +
+								'<td>'+ placa + '</td>' +
+								'<td hidden>'+ operacao + '</td>'+
+		 						'<td><button onclick="removeVeiculo('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
+		 					'</tr>';
+	}
+}
 
 $("#quarto2").mousedown(function(){
 
@@ -14,8 +38,8 @@ $("#quarto2").mousedown(function(){
 		console.log('')
 	} else {
 		if(tipos.includes(tipo)){
-			mostraPrateleira(quarto)
-			mostraGaragem(quarto)
+			// mostraPrateleira(quarto)
+			mostraVeiculo()
 		} else (
 			console.log('')
 		)

@@ -21,4 +21,7 @@ export function desfazer(q, x, y, z) {
 
     var prateleiraResultado = document.getElementById('lprodutos')
 	prateleiraResultado.innerHTML = '';
+    
+    var garagemResultado = document.getElementById('garagem')
+	garagemResultado.innerHTML = '';
 }

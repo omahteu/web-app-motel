@@ -7,7 +7,6 @@ $("#salvar").click(function(){
 	} else (
 		alert('Selecione um quarto em modo Pernoite ou Locação!')
 	)
-
 })
 
 function gera_id(){
@@ -51,7 +50,7 @@ function registroProduto(){
 }
 
 function removeProduto(operacao){
-	var patio = JSON.parse(localStorage.getItem('produtos'));
+	var patio = JSON.parse(localStorage.getItem('produtos'))
 
 	 for(var i = 0 ; i < patio.length; i++){
 		if(patio[i].operacao == operacao){
@@ -65,20 +64,24 @@ function removeProduto(operacao){
 }
 
 function mostraProduto(){
+
+	var nQuarto =  $("#quarto").text()
 	var dados_produtos = JSON.parse(localStorage.getItem('produtos'))
 	var prateleira = document.getElementById('lprodutos');
 	prateleira.innerHTML = '';
+
 	
+	var dados = dados_produtos.filter(quartos => quartos.quarto == nQuarto)
 
-	for(var i = 0; i < dados_produtos.length; i++){
+	for(var i = 0; i < dados.length; i++){
 
-		var operacao =  dados_produtos[i].operacao
-		var quarto =  dados_produtos[i].quarto
-		var codigo = dados_produtos[i].codigo
-		var descricao = dados_produtos[i].descricao
-		var quantidade = dados_produtos[i].quantidade
-		var valorUnitario = dados_produtos[i].valor_unitario
-		var valorTotal = dados_produtos[i].valor_total
+		var operacao =  dados[i].operacao
+		var quarto =  dados[i].quarto
+		var codigo = dados[i].codigo
+		var descricao = dados[i].descricao
+		var quantidade = dados[i].quantidade
+		var valorUnitario = dados[i].valor_unitario
+		var valorTotal = dados[i].valor_total
 
 		prateleira.innerHTML += '<tr><td hidden>'+ operacao + '</td>'+
 		 							'<td>'+ quarto + '</td>' +
