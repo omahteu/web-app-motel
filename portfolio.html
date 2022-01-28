@@ -31,15 +31,15 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="portfolio.html">Software</a></h1>
+			<h1 id="fh5co-logo"><a href="portfolio.html">Dashboard</a></h1>
 			<div>
 				<ul type="None">
 					<li>
 						<p class="infos">Entrada: <span id="entrada"></span></p>
-						<p class="infos">Quarto: R$ <span id="valor-quarto">0</span></p>
-						<p class="infos">Quarto <span id="quarto">0</span></p>
-						<p class="infos" id="tipo">0</p>
-						<p class="infos" id="intervalo">0</p>
+						<p class="infos">Valor: R$ <span id="valor-quarto">0</span></p>
+						<p class="infos">Quarto: <span id="quarto">0</span></p>
+						<p class="infos" id="tipo" hidden>0</p>
+						<p class="infos" id="intervalo" hidden>0</p>
 					</li>
 				</ul>
 				<form>
@@ -53,7 +53,7 @@
 					<input type="text" class="qtd" placeholder="Quantidade" >
 					<input type="text" class="des" placeholder="Descrição" disabled>
 					<input type="text" class="vun" placeholder="Valor Unitário" disabled>
-					<input type="text" class="tot" placeholder="Total">
+					<input type="text" class="tot" placeholder="Total" disabled>
 				</form>
 
 				<button id="guardar" data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Adicionais</button>
@@ -110,7 +110,7 @@
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Quartos</h2>
 				<div class="row row-bottom-padded-md" id="qr">
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-11.jpg);">
+						<a href="#" class="work image-popup" id="imagi">
 							<div class="desc" id="quarto1">
 								<h3>AR</h3>
 								<h3 id="tempo">00:00:00</h3>
@@ -122,12 +122,14 @@
 								<button type="button" name="1" id="botaoq1" class="btn pernoite"></button>
 								<button type="button" name="1" id="botaoq1" class="btn locado"></button>
 								<button type="button" name="1" id="botaoq1" class="btn faxina"></button>
-								<button type="button" name="1" id="botaoq1" class="btn disponivel"></button>
+								<!-- <button type="button" name="1" id="botaoq1" class="btn disponivel"></button> -->
 							</div>
 						</a>
 						<input type="button" value="" id="a1">
 						<input type="button" value="" id="a2">
 						<input type="button" value="" id="a3">
+						
+
 					</div>
 
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
@@ -143,7 +145,7 @@
 								<button type="button" name="2" id="botaoq2" class="btn pernoite"></button>
 								<button type="button" name="2" id="botaoq2" class="btn locado"></button>
 								<button type="button" name="2" id="botaoq2" class="btn faxina"></button>
-								<button type="button" name="2" id="botaoq2" class="btn disponivel"></button>
+								<!-- <button type="button" name="2" id="botaoq2" class="btn disponivel"></button> -->
 							</div>
 						</a>
 						<input type="button" value="" id="a4">
@@ -179,7 +181,7 @@
 	<script type="module" src="botoes/botaoLocado.js"></script>
 	<script type="module" src="botoes/botaoFaxina.js"></script>
 
-	<!--<script src="boxes/reseta.js"></script>-->
+	<script src="boxes/reseta.js"></script>
 
 	<script type="module" src="acoes/acaoQuartoUm.js"></script>
 	<script type="module" src="acoes/acaoQuartoDois.js"></script>

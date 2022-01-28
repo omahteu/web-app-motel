@@ -27,6 +27,35 @@ function mostraVeiculo(){
 
 $("#quarto2").mousedown(function(){
 
+	var cor = $(this).css("background-color")
+
+	switch(cor){
+		case 'rgb(30, 144, 255)':
+			$("#tipo").text('reservado')
+			break
+		case 'rgb(240, 230, 140)':
+			$("#tipo").text('limpeza')
+			break
+		case 'rgb(218, 165, 32)':
+			$("#tipo").text('aguardando')
+			break
+		case 'rgb(169, 169, 169)':
+			$("#tipo").text('manutencao')
+			break
+		case 'rgb(139, 0, 139)':
+			$("#tipo").text('pernoite')
+			break
+		case 'rgb(255, 0, 0)':
+			$("#tipo").text('locado')
+			break
+		case 'rgb(255, 228, 196)':
+			$("#tipo").text('faxina')
+			break
+		case 'rgb(245, 245, 245)':
+			$("#tipo").text('0')
+			break
+	}
+
 	$("#quarto").text('2')
 	$("#intervalo").text('a4,a5,a6')
 
@@ -45,5 +74,3 @@ $("#quarto2").mousedown(function(){
 		)
 	}
 });
-
-// FAZER VERIFICAÇÃO DE ESTÁ PERNOITE OU LOCADO

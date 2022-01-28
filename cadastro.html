@@ -95,36 +95,34 @@
 
               
               <div class="row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Tolerância (Minutos)">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Tolerância (Minutos)">
+                </div>
+
+                <div class="col">
+                  <div class="form-group col-md-4">
+                    <select id="inputState" class="form-controle">
+                      <option selected>...</option>
+                      <option>Ventilador</option>
+                      <option>Ar</option>
+                    </select>
                   </div>
+                </div>
 
-                  <div class="col">
-                      <div class="form-group col-md-4">
-                          <select id="inputState" class="form-controle">
-                            <option selected>...</option>
-                            <option>Ventilador</option>
-                            <option>Ar</option>
-                          </select>
-                        </div>
+                <div class="col">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="forme-check-label" for="gridCheck">
+                        Adicional em Percentual
+                      </label>
+                    </div>
                   </div>
+                </div>
 
-                  <div class="col">
-                      <div class="form-group">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="forme-check-label" for="gridCheck">
-                              Adicional em Percentual
-                            </label>
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col">
-                      <input type="text" class="form-control" placeholder="Tolerância (Minutos)" hidden>
-                  </div>
-
-
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Tolerância (Minutos)" hidden>
+                </div>
               </div>
 
               <div class="form-check forme-check-inline">
@@ -172,6 +170,9 @@
                     <input type="button" class="btn btn-danger" value="Excluir">
                   </div>
               </div>
+
+
+              
             </form>
 				</div>
 			</div>
