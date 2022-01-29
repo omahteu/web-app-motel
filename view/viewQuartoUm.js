@@ -1,3 +1,5 @@
+import { codigosIDs } from "../tags/particao.js"
+
 function mostraProduto(){
 
 	var nQuarto =  $("#quarto").text()
@@ -5,35 +7,41 @@ function mostraProduto(){
 	var prateleira = document.getElementById('lprodutos');
 	prateleira.innerHTML = '';
 
+	try {
+		var dados = dados_produtos.filter(quartos => quartos.quarto == nQuarto)
+
+		for(var i = 0; i < dados.length; i++){
+
+			var operacao =  dados[i].operacao
+			var quarto =  dados[i].quarto
+			var codigo = dados[i].codigo
+			var descricao = dados[i].descricao
+			var quantidade = dados[i].quantidade
+			var valorUnitario = dados[i].valor_unitario
+			var valorTotal = dados[i].valor_total
 	
-	var dados = dados_produtos.filter(quartos => quartos.quarto == nQuarto)
-
-	for(var i = 0; i < dados.length; i++){
-
-		var operacao =  dados[i].operacao
-		var quarto =  dados[i].quarto
-		var codigo = dados[i].codigo
-		var descricao = dados[i].descricao
-		var quantidade = dados[i].quantidade
-		var valorUnitario = dados[i].valor_unitario
-		var valorTotal = dados[i].valor_total
-
-		prateleira.innerHTML += '<tr><td hidden>'+ operacao + '</td>'+
-		 							'<td>'+ quarto + '</td>' +
-									'<td>'+ codigo + '</td>' +
-									'<td>'+ descricao + '</td>' +
-									'<td>'+ quantidade + '</td>' +
-									'<td>'+ valorUnitario + '</td>' +
-									'<td>'+ valorTotal + '</td>' +
-		 							'<td><button onclick="removeProduto('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
-		 						'</tr>';
+			prateleira.innerHTML += '<tr><td hidden>'+ operacao + '</td>'+
+										 '<td>'+ quarto + '</td>' +
+										'<td>'+ codigo + '</td>' +
+										'<td>'+ descricao + '</td>' +
+										'<td>'+ quantidade + '</td>' +
+										'<td>'+ valorUnitario + '</td>' +
+										'<td>'+ valorTotal + '</td>' +
+										 '<td><button onclick="removeProduto('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
+									 '</tr>';
+		}
+	} catch (error) {
+		localStorage.setItem('produtos', JSON.stringify([]))
 	}
+	
 }
 
 $("#quarto1").mousedown(function(){
 
+	// Recuperação da Cor das Tags
 	var cor = $(this).css("background-color")
 
+	// Filtro para Restaurar as Tags Corretas
 	switch(cor){
 		case 'rgb(30, 144, 255)':
 			$("#tipo").text('reservado')
@@ -61,21 +69,32 @@ $("#quarto1").mousedown(function(){
 			break
 	}
 
-	$("#quarto").text('1')
+	// Exibição de Dados do Cabeçalho
 	$("#intervalo").text('a1,a2,a3')
+	backupInfos()
 
+	// Variáveis usadas para Filtro
 	let quarto = $("#quarto").text()
 	let tipo = $("#tipo").text()
 	let tipos = ['pernoite', 'locado']
 
-	if(quarto != 1){
-		//pass
-	} else {
-		if(tipos.includes(tipo)){
-			mostraProduto()
-			// mostraGaragem(quarto)
-		} else (
-			console.log('')
-		)
+	// Filtro para Restauração de Produtos e Veículos
+	if(tipos.includes(tipo)){
+		mostraProduto()
+		// mostraGaragem(quarto)
 	}
+
 });
+
+function backupInfos(){
+
+	// Recuperação da Chave e do LocalStorage
+	var IDCodigo = $(codigosIDs).get(-1);
+	var dados_particao = JSON.parse(localStorage.getItem(IDCodigo))
+
+	// Exibição dos Dados Recuperados
+	$("#quarto").text(dados_particao[0].quarto)
+	$("#entrada").text(dados_particao[0].datahora)
+	$("#valor-quarto").text(dados_particao[0].valor)
+	
+}

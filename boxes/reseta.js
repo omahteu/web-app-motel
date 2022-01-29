@@ -12,6 +12,7 @@ function inativo() {
 	$("#quarto").text('0')
 	$("#intervalo").text('0')
   $("#tipo").text('0')
+  $("#entrada").text('')
 	var prateleiraResultado = document.getElementById('lprodutos')
 	prateleiraResultado.innerHTML = '';
 }

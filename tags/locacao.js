@@ -24,4 +24,5 @@ export function locado(q, x, y, z) {
     $("#quarto").text(q)
     $("#tipo").text('locado')
     $("#intervalo").text(x + "," + y + "," + z)
+    $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
 }

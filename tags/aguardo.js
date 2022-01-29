@@ -7,6 +7,11 @@ export function aguardando(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
+    var horaEntrada = new Date();
+    var hora = horaEntrada.getHours()
+    var minutos = horaEntrada.getMinutes()
+    $("[id=tempo]").text(String(hora) + ':' + String(minutos))
+
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Iniciar Limpeza')
 
@@ -19,4 +24,5 @@ export function aguardando(q, x, y, z) {
     $("#quarto").text(q)
     $("#tipo").text('aguardando')
     $("#intervalo").text(x + "," + y + "," + z)
+    $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
 }

@@ -7,6 +7,11 @@ export function faxina(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
+    var horaEntrada = new Date();
+    var hora = horaEntrada.getHours()
+    var minutos = horaEntrada.getMinutes()
+    $("[id=tempo]").text(String(hora) + ':' + String(minutos))
+
     $("#" + x).css('visibility', 'visible')
     $("#" + x).val('Disponibilizar Quarto')
 
@@ -19,4 +24,5 @@ export function faxina(q, x, y, z) {
     $("#quarto").text(q)
     $("#tipo").text('faxina')
     $("#intervalo").text(x + "," + y + "," + z)
+    $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
 }

@@ -3,6 +3,7 @@ import { pernoite } from "./pernoite.js"
 import { locado } from "./locacao.js"
 import { limpeza } from "./limpeza.js"
 import { faxina } from "./faxina.js"
+import { index } from "./particao.js"
 
 export function triagem(acao, quarto, x, y, z){
 
@@ -23,10 +24,11 @@ export function triagem(acao, quarto, x, y, z){
               }
 
             break
-        case "Alterar P/ Pernoite":
+        case "Iniciar Pernoite":
             pernoite(quarto, x, y, z)
+            index()
             break
-        case "Alterar P/ Locação":
+        case "Iniciar Locação":
             locado(quarto, x, y, z)
             break
         case "Iniciar Limpeza":

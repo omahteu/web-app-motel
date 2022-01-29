@@ -13,16 +13,16 @@ export function reservado(q, x, y, z) {
     $("[id=tempo]").text(String(hora) + ':' + String(minutos))
 
     $("#" + x).css('visibility', 'visible')
-    $("#" + x).val('Alterar P/ Pernoite')
+    $("#" + x).val('Iniciar Pernoite')
 
     $("#" + y).css('visibility', 'visible')
-    $("#" + y).val('Alterar P/ Locação')
+    $("#" + y).val('Iniciar Locação')
 
     $("#" + z).css('visibility', 'visible')
     $("#" + z).val('Cancelar Reserva')
 
     $("#quarto").text(q)
     $("#tipo").text('reservado')
-    $("#entrada").text(String(hora) + ':' + String(minutos))
+    $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
     $("#intervalo").text(x + "," + y + "," + z)
 }
