@@ -1,7 +1,9 @@
 $("#salvar").click(function(){
+
 	var tipos = ['pernoite', 'locado']
 	var tipo = $("#tipo").text()
 
+	// Verificação se o quarto está em Pernoite ou Locação
 	if(tipos.includes(tipo)){
 		registroProduto()
 	} else (
@@ -10,30 +12,33 @@ $("#salvar").click(function(){
 })
 
 function gera_id(){
-	var size = 3
-	var randomized = Math.ceil(Math.random() * Math.pow(10,size))
-	return randomized
+	var tamanho = 3
+	var numero = Math.ceil(Math.random() * Math.pow(10, tamanho))
+	return numero
 }
 
 function registroProduto(){
 	
-    var quarto =  $("#quarto").text()
-    var codigo = $("#cod").val()
-    var descricao = $("#des").val()
+	// Parâmetros
+	var codigo = $("#cod").val()
+	var descricao = $("#des").val()
     var quantidade = $("#qtd").val()
+	var valorTotal = $("#tot").val()
+    var quarto =  $("#quarto").text()
     var valorUnitario = $("#vun").val()
-    var valorTotal = $("#tot").val()
     
+    // Objeto com Parãmtros
 	var produto = {
-		operacao: gera_id(),
-		quarto: quarto,
 		codigo: codigo,
+		quarto: quarto,
+		operacao: gera_id(),
 		descricao: descricao,
 		quantidade: quantidade,
+		valor_total: valorTotal,
 		valor_unitario: valorUnitario,
-		valor_total: valorTotal
 	}
 
+	// Salvando em LocalStorage
 	if(localStorage.getItem('produtos') === null){
 		var produtos = [];
 		produtos.push(produto);
@@ -44,8 +49,10 @@ function registroProduto(){
 		localStorage.setItem('produtos', JSON.stringify(produtos));
 	}
 
+	// Limpa os Campos
 	document.getElementById('produtos').reset();
 
+	// Exibe os Produtos
 	mostraProduto();
 }
 
