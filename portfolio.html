@@ -6,7 +6,7 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Software</title>
+		<title>Horizonte || Quartos</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
@@ -31,7 +31,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="portfolio.html">Dashboard</a></h1>
+			<h1 id="fh5co-logo"><a href="portfolio.html">Horizonte</a></h1>
 			<div>
 				<ul type="None">
 					<li>
@@ -40,23 +40,41 @@
 						<p class="infos">Quarto: <span id="quarto">0</span></p>
 						<p class="infos" id="tipo" hidden>0</p>
 						<p class="infos" id="intervalo" hidden>0</p>
+						<p class="infos" id="idquarto" hidden></p>
 					</li>
 				</ul>
 				<form>
-					<input type="number" min="0" class="pes" placeholder="Pessoas" >
-					<input type="text" class="obs" placeholder="Observações" >
+					<input type="number" min="0" class="form-control" id="pes" placeholder="Pessoas" >
+					<input type="text" class="form-control" id="obs" placeholder="Observações" >
 				</form>
 				<form id="produtos">
-					<select class="cod">
+					<select class="form-control" id="cod">
 						<option hidden></option>
 					</select>
-					<input type="text" class="qtd" placeholder="Quantidade" >
-					<input type="text" class="des" placeholder="Descrição" disabled>
-					<input type="text" class="vun" placeholder="Valor Unitário" disabled>
-					<input type="text" class="tot" placeholder="Total" disabled>
+					<input type="text" class="form-control" id="qtd" placeholder="Quantidade" >
+					<input type="text" class="form-control" id="des" placeholder="Descrição" disabled>
+					<input type="text" class="form-control" id="vun" placeholder="Valor Unitário" disabled>
+					<input type="text" class="form-control" id="tot" placeholder="Total" disabled>
+					<input type="button" class="btnverde" id="salvar" value="Salvar">
 				</form>
 
-				<button id="guardar" data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Adicionais</button>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Qrt</th>
+							<th>Cod</th>
+							<th>Desc</th>
+							<th>Qtd</th>
+							<th>Unit</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody id="lprodutos">
+
+					</tbody>
+				</table>
+
+				<button class="btnamarelo" id="guardar" data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Adicionais</button>
 				<form class="mt-3 collapse review-form-box" id="formLogin">
 
 					<div class="form-row">
@@ -67,7 +85,7 @@
 						</select>
 						<input type="text" class="form-control" id="modelo" placeholder="Modelo">		
 						<input type="text" class="form-control" id="placa" placeholder="Placa">
-						<input type="button" id="guardara" value="Guardar">
+						<input type="button" class="btnverde" id="guardara" value="Guardar">
 					</div>
 
 					<table class="table">
@@ -85,23 +103,9 @@
 					</table>
 				</form>
 
-				<input type="button" id="salvar" value="Salvar">
+				
 
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Qrt</th>
-							<th>Cod</th>
-							<th>Desc</th>
-							<th>Qtd</th>
-							<th>Unit</th>
-							<th>Total</th>
-						</tr>
-					</thead>
-					<tbody id="lprodutos">
 
-					</tbody>
-				</table>
 			</div>
 		</aside>
 
@@ -110,7 +114,7 @@
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Quartos</h2>
 				<div class="row row-bottom-padded-md" id="qr">
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" id="imagi">
+						<a href="#" class="work image-popup" id="imagemQuarto1">
 							<div class="desc" id="quarto1">
 								<h3>AR</h3>
 								<h3 id="tempo">00:00:00</h3>
@@ -133,7 +137,7 @@
 					</div>
 
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-12.jpg);">
+						<a href="#" class="work image-popup" id="imagemQuarto2">
 							<div class="desc" id="quarto2">
 								<h3>AR</h3>
 								<h3 id="tempo">00:00:00</h3>

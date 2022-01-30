@@ -22,19 +22,19 @@ for (const property in produtos) {
 }
 
 indexes.forEach(function(item){
-    $('.cod').append('<option>' + item + '</option>');
+    $('#cod').append('<option>' + item + '</option>');
 });
 
-$('.cod').change(function() {
-    var option = $('.cod').find(":selected").index();
+$('#cod').change(function() {
+    var option = $('#cod').find(":selected").index();
 
-    $(".des").val(produtos[option]['descrição'])
-    $(".vun").val('R$ ' + produtos[option]['valor'])
+    $("#des").val(produtos[option]['descrição'])
+    $("#vun").val('R$ ' + produtos[option]['valor'])
 
-    $('.qtd').keyup(function(){
+    $('#qtd').keyup(function(){
         var qtd = $(this).val()
         var total = Number(produtos[option]['valor']) * Number(qtd)
-        $(".tot").val('R$ ' + total)
+        $("#tot").val('R$ ' + total)
 
     });
 });

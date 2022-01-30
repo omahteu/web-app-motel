@@ -38,9 +38,11 @@ function mostraProduto(){
 
 $("#quarto1").mousedown(function(){
 
+	var instance = $(this).context.id
+
 	// Recuperação da Cor das Tags
 	var cor = $(this).css("background-color")
-
+	
 	// Filtro para Restaurar as Tags Corretas
 	switch(cor){
 		case 'rgb(30, 144, 255)':
@@ -71,10 +73,9 @@ $("#quarto1").mousedown(function(){
 
 	// Exibição de Dados do Cabeçalho
 	$("#intervalo").text('a1,a2,a3')
-	backupInfos()
+	backupInfos(instance)
 
 	// Variáveis usadas para Filtro
-	let quarto = $("#quarto").text()
 	let tipo = $("#tipo").text()
 	let tipos = ['pernoite', 'locado']
 
@@ -83,18 +84,25 @@ $("#quarto1").mousedown(function(){
 		mostraProduto()
 		// mostraGaragem(quarto)
 	}
-
 });
 
-function backupInfos(){
+function backupInfos(instancia){
 
 	// Recuperação da Chave e do LocalStorage
-	var IDCodigo = $(codigosIDs).get(-1);
-	var dados_particao = JSON.parse(localStorage.getItem(IDCodigo))
+	// var IDCodigo = $(codigosIDs).get(-1);
+	var dados_particao = JSON.parse(localStorage.getItem(instancia))
+	// console.log(dados_particao)
+
+	var dados_quarto = JSON.parse(localStorage.getItem(dados_particao))
 
 	// Exibição dos Dados Recuperados
-	$("#quarto").text(dados_particao[0].quarto)
-	$("#entrada").text(dados_particao[0].datahora)
-	$("#valor-quarto").text(dados_particao[0].valor)
-	
+	try {
+		$("#quarto").text(dados_quarto[0].quarto)
+		$("#entrada").text(dados_quarto[0].datahora)
+		$("#valor-quarto").text(dados_quarto[0].valor)
+	} catch (error) {
+		$("#quarto").text('')
+		$("#entrada").text('')
+		$("#valor-quarto").text('')
+	}
 }

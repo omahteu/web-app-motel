@@ -18,11 +18,11 @@ function gera_id(){
 function registroProduto(){
 	
     var quarto =  $("#quarto").text()
-    var codigo = $(".cod").val()
-    var descricao = $(".des").val()
-    var quantidade = $(".qtd").val()
-    var valorUnitario = $(".vun").val()
-    var valorTotal = $(".tot").val()
+    var codigo = $("#cod").val()
+    var descricao = $("#des").val()
+    var quantidade = $("#qtd").val()
+    var valorUnitario = $("#vun").val()
+    var valorTotal = $("#tot").val()
     
 	var produto = {
 		operacao: gera_id(),

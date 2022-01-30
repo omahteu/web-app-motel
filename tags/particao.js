@@ -14,16 +14,22 @@ export function index(){
     // Quarto
     var quarto = $("#quarto").text()
 
-    // ID
-    var codigoID = gera_id()
-    codigosIDs.push(codigoID)
-
     // Agrupando Dados
     var dado = {
         datahora: datahora,
         valor: valor,
         quarto: quarto
     }
+
+    // ID
+    var codigoID = gera_id()
+    codigosIDs.push(codigoID)
+
+    if(localStorage.getItem('quarto' + quarto) === null){
+        localStorage.setItem('quarto' + quarto, codigoID);
+    } else (
+        console.log('já rxite')
+    )
 
     // Salvar em LocalStorage
     if(localStorage.getItem(codigoID) === null){
@@ -35,7 +41,6 @@ export function index(){
 		dados.push(dado);
 		localStorage.setItem(codigoID, JSON.stringify(dados));
 	}
-
 }
 
 function gera_id(){
