@@ -18,7 +18,11 @@ export function triagem(acao, quarto, x, y, z){
         case "Encerrar":
 
             if (confirm("Deseja encerrar o quarto " + quarto + "?") == true) {
+
+                // Verificar se já posso apagar os dados aqui, ou só depois
+
                 desfazer(quarto, x, y, z)
+                $(location).attr('href', 'checkout.html');
               } else {
                 // pass
               }
