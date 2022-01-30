@@ -1,3 +1,5 @@
+import { precos } from "../boxes/box.js";
+
 export function pernoite(q, x, y, z) {
     $("#quarto" + q).css({
         "background-color": "#8B008B",
@@ -21,8 +23,22 @@ export function pernoite(q, x, y, z) {
     // $("#" + z).css('visibility', 'visible')
     // $("#" + z).val('Cancelar Reserva')
 
+    var tipoQuarto = $('#tipo' + q).text()
+
+    switch (tipoQuarto){
+        case 'AR':
+            $("#valor-quarto").text(precos[2].pernoiteVentilador)
+            break
+        case 'VENTILADOR':
+            $("#valor-quarto").text(precos[3].pernoiteAr)
+            break
+    }
+
     $("#quarto").text(q)
     $("#tipo").text('pernoite')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
 }
+ 
+// adicionar mais um parâmetro
+// 

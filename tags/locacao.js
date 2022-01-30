@@ -1,3 +1,5 @@
+import { precos } from "../boxes/box.js";
+
 export function locado(q, x, y, z) {
     $("#quarto" + q).css({
         "background-color": "#FF0000",
@@ -20,6 +22,17 @@ export function locado(q, x, y, z) {
 
     // $("#" + z).css('visibility', 'visible')
     // $("#" + z).val('Cancelar Reserva')
+
+    var tipoQuarto = $('#tipo' + q).text()
+
+    switch (tipoQuarto){
+        case 'AR':
+            $("#valor-quarto").text(precos[1].locacaoAr)
+            break
+        case 'VENTILADOR':
+            $("#valor-quarto").text(precos[0].locacaoVentilador)
+            break
+    }
 
     $("#quarto").text(q)
     $("#tipo").text('locado')
