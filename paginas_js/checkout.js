@@ -43,7 +43,7 @@ $("#aplicar").click(function(){
 		localStorage.setItem('produtos', JSON.stringify([]))
 	}
 
-	$("#valorQuarto").text(dados_quarto[0].valor)
+	
 
 	var totais = $("[id=total]").text()
 
@@ -61,6 +61,13 @@ $("#aplicar").click(function(){
 	}
 
 	console.log(sum)
+
+	$("#valorQuarto").text(dados_quarto[0].valor)
+	$("#valorItens").text(sum)
+
+	var ttgeral = Number(dados_quarto[0].valor) + Number(sum)
+
+	$("#totalGeral").text(ttgeral)
 })
 
 // Consegui somar valores
