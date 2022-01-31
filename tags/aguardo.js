@@ -25,4 +25,6 @@ export function aguardando(q, x, y, z) {
     $("#tipo").text('aguardando')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
+    $("#imagemQuarto" + q).css('border', '2px solid rgb(218, 165, 32)')
+    $("#imagemQuarto" + q).css('box-shadow', 'inset 0 0 1em rgb(218, 165, 32), 0 0 1em #000')
 }

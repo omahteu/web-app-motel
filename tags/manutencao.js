@@ -25,4 +25,6 @@ export function manutencao(q, x, y, z) {
     $("#tipo").text('manutencao')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
+    $("#imagemQuarto" + q).css('border', '2px solid rgb(169, 169, 169)')
+    $("#imagemQuarto" + q).css('box-shadow', 'inset 0 0 1em rgb(169, 169, 169), 0 0 1em #000')
 }

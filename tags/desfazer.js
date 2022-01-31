@@ -18,6 +18,8 @@ export function desfazer(q, x, y, z) {
     $("#entrada").text('')
     $("#valor-quarto").text('0')
     $("#intervalo").text("0")
+    $("#imagemQuarto" + q).css('border', '2px solid #4cae4c')
+    $("#imagemQuarto" + q).css('box-shadow', 'inset 0 0 1em #4cae4c, 0 0 1em #4cae4c')
 
     var prateleiraResultado = document.getElementById('lprodutos')
 	prateleiraResultado.innerHTML = '';

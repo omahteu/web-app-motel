@@ -38,6 +38,8 @@ export function pernoite(q, x, y, z) {
     $("#tipo").text('pernoite')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
+    $("#imagemQuarto" + q).css('border', '2px solid rgb(139, 0, 139)')
+    $("#imagemQuarto" + q).css('box-shadow', 'inset 0 0 1em rgb(139, 0, 139), 0 0 1em #000')
 }
  
 // adicionar mais um parâmetro

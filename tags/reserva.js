@@ -25,4 +25,6 @@ export function reservado(q, x, y, z) {
     $("#tipo").text('reservado')
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
     $("#intervalo").text(x + "," + y + "," + z)
+    $("#imagemQuarto" + q).css('border', '2px solid rgb(30, 144, 255)')
+    $("#imagemQuarto" + q).css('box-shadow', 'inset 0 0 1em rgb(30, 144, 255), 0 0 1em #000')
 }

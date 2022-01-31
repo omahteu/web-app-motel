@@ -25,4 +25,6 @@ export function limpeza(q, x, y, z) {
     $("#tipo").text('limpeza')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
+    $("#imagemQuarto" + q).css('border', '2px solid rgb(240, 230, 140)')
+    $("#imagemQuarto" + q).css('box-shadow', 'inset 0 0 1em rgb(240, 230, 140), 0 0 1em #000')
 }
