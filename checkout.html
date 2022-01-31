@@ -23,71 +23,8 @@
                         <th class="price">Preço</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="product-cart d-flex">
-                            <div class="product-content media-body">
-                              <h5 class="title"><a href="https://demo.ecommercehtml.com/checkout.html#0">Hollow Port</a></h5>
-                              <span>UG 0123</span>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <p>0</p>
-                        </td>
-                        <td>
-                          <p class="price">R$36.00</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="product-cart d-flex">
-                            <div class="product-content media-body">
-                              <h5 class="title"><a href="https://demo.ecommercehtml.com/checkout.html#0">Hollow Port</a></h5>
-                              <span>UG 0123</span>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <p>0</p>
-                        </td>
-                        <td>
-                          <p class="price">R$36.00</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="product-cart d-flex">
-                            <div class="product-content media-body">
-                              <h5 class="title"><a href="https://demo.ecommercehtml.com/checkout.html#0">Hollow Port</a></h5>
-                              <span>UG 0123</span>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <p>0</p>
-                        </td>
-                        <td>
-                          <p class="price">R$36.00</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="product-cart d-flex">
-                            <div class="product-content media-body">
-                              <h5 class="title"><a href="https://demo.ecommercehtml.com/checkout.html#0">Hollow Port</a></h5>
-                              <span>UG 0123</span>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <p>0</p>
-                        </td>
-                        <td>
-                          <p class="price">R$36.00</p>
-                        </td>
-                      </tr>
+                    <tbody id="itensComprados">
+
                     </tbody>
                   </table>
                 </div>
@@ -97,7 +34,7 @@
                     flex-wrap
                   ">
                   <div class="checkout-coupon">
-                    <form action="https://demo.ecommercehtml.com/checkout.html#">
+                    <form>
                       <div class="single-form form-default d-flex">
                         <div class="form-input form">
                           <input type="text" placeholder="Código de Desconto">
@@ -105,9 +42,10 @@
                         <button class="main-btn primary-btn">Aplicar</button>
                       </div>
                     </form>
+                    <button id="aplicar">teste</button>
                   </div>
                   <div class="checkout-coupon">
-                    <form action="https://demo.ecommercehtml.com/checkout.html#">
+                    <form>
                       <div class="single-form form-default d-flex">
                         <div class="form-input form">
                           <select class="form-input form">
@@ -122,19 +60,19 @@
                   <div class="checkout-total">
                     <div class="single-total">
                       <p class="value">Valor Quarto:</p>
-                      <p class="price">$144.00</p>
+                      <p class="price">R$ <span id="valorQuarto"></span></p>
                     </div>
                     <div class="single-total">
                       <p class="value">Valor Itens:</p>
-                      <p class="price">$10.50</p>
+                      <p class="price">R$10.50</p>
                     </div>
                     <div class="single-total">
                       <p class="value">Descontos:</p>
-                      <p class="price">$10.50</p>
+                      <p class="price">R$10.50</p>
                     </div>
                     <div class="single-total total-payable">
                       <p class="value">Total:</p>
-                      <p class="price">$165.00</p>
+                      <p class="price">R$165.00</p>
                     </div>
                   </div>
                 </div>
@@ -152,4 +90,6 @@
         </div>
     </section>
 </body>
+  <script src="paginas_js/jquery.js"></script>
+  <script src="paginas_js/checkout.js"></script>
 </html>
