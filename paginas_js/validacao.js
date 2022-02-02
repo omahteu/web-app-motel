@@ -3,7 +3,7 @@ $(document).ready(function(){
     var usuarioLogado = localStorage.getItem('usuarioLogado');
 
     if (!usuarioLogado) {
-        window.location = "../login.html"
+        window.location = "../index.html"
     }
 
 })

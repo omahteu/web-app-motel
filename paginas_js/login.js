@@ -25,7 +25,7 @@ $("#entrar").click(function(){
         if (nome.val() == users[i].nome && senha.val() == users[i].senha) {
             alert("Login com Sucesso!")
             localStorage.setItem('usuarioLogado', '1');
-            $(location).attr('href', './paginas/index.html');
+            $(location).attr('href', './paginas/home.html');
             b = true                       
         }
     } 
