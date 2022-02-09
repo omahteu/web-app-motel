@@ -1,15 +1,15 @@
 produtos = {
-    '1' : {
+    'Água Mineral' : {
         'descrição': 'Água Mineral',
         'valor': 2.00
     },
 
-    '2' : {
+    'Guaraná 350 ml' : {
         'descrição': 'Guaraná 350 ml',
         'valor': 2.50
     },
 
-    '3' : {
+    'Redbull' : {
         'descrição': 'Redbull',
         'valor': 7.35
     }

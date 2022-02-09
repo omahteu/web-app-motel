@@ -4,6 +4,7 @@ import { locado } from "./locacao.js"
 import { limpeza } from "./limpeza.js"
 import { faxina } from "./faxina.js"
 import { index } from "./particao.js"
+import { aguardando } from './aguardo.js'
 
 var rota = 'rota'
 
@@ -26,7 +27,9 @@ export function triagem(acao, quarto, x, y, z){
                 // Verificar se já posso apagar os dados aqui, ou só depois
 
                 desfazer(quarto, x, y, z)
-                $(location).attr('href', 'checkout.html');
+                // $(location).attr('href', 'checkout.html');
+                window.open('../paginas/checkout.html', '_blank');
+                aguardando(quarto, x, y, z)
               } else {
                 // pass
               }

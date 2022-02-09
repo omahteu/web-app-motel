@@ -6,16 +6,20 @@ $(".locado").click(function(){
     var quarto = $(this).attr('name')
     var rota = $(this).attr('class')
 
-    switch(quarto){
-        case '1':
-            var flags = modos.slice(0, 3)
-            locado(quarto, rota,  flags[0], flags[1], flags[2])
-            index()
-            break
-        case '2':
-            var flags = modos.slice(3, 6)
-            locado(quarto, rota, flags[0], flags[1], flags[2])
-            index()
-            break
+    if(confirm('É uma troca de suíte?') == true){
+        console.log('Troca de Suíte')
+    } else {
+        switch(quarto){
+            case '1':
+                var flags = modos.slice(0, 3)
+                locado(quarto, rota,  flags[0], flags[1], flags[2])
+                index()
+                break
+            case '2':
+                var flags = modos.slice(3, 6)
+                locado(quarto, rota, flags[0], flags[1], flags[2])
+                index()
+                break
+        }
     }
 })

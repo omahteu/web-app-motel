@@ -14,8 +14,11 @@ export function locado(q, t,  x, y, z) {
     var minutos = horaEntrada.getMinutes()
     $("[id=tempo]").text(String(hora) + ':' + String(minutos))
 
+    // $("#" + x).css('visibility', 'visible')
+    // $("#" + x).val('Alterar P/ Pernoite')
+
     $("#" + x).css('visibility', 'visible')
-    $("#" + x).val('Alterar P/ Pernoite')
+    $("#" + x).val('Trocar Suíte')
 
     $("#" + y).css('visibility', 'visible')
     $("#" + y).val('Encerrar')
