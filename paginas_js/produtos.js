@@ -26,7 +26,8 @@ indexes.forEach(function(item){
 });
 
 $('#cod').change(function() {
-    var option = $('#cod').find(":selected").index();
+    var option = $('#cod').find(":selected").text();
+    console.log(option)
 
     $("#des").val(produtos[option]['descrição'])
     $("#vun").val('R$ ' + produtos[option]['valor'])
