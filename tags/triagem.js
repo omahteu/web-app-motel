@@ -58,7 +58,7 @@ export function triagem(acao, quarto, x, y, z){
             break
 
         case "Iniciar Faxina":
-            faxina(quarto, x, y, z)
+            faxina(quarto, rota, x, y, z)
             break
     }
 }
