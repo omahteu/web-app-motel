@@ -1233,8 +1233,15 @@ form {
   background-image: url(../images/img-12.jpg)
 }
 
-.fundo {
+.tarja {
   background-color: #03A9F4;
   border: 2px solid #000;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
   border-radius: 500px;
 }
