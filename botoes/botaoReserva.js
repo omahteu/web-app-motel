@@ -3,6 +3,9 @@ import { modos } from "../boxes/box.js"
 
 $(".reservado").click(function(){
     var quarto = $(this).attr('name')
+    // var tipoQuarto = $(this).attr('class')
+
+    // console.log(tipoQuarto)
     
     switch(quarto){
         case '1':

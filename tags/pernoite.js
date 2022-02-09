@@ -1,6 +1,6 @@
 import { precos } from "../boxes/box.js";
 
-export function pernoite(q, x, y, z) {
+export function pernoite(q, t, x, y, z) {
     $("#quarto" + q).css({
         "background-color": "#8B008B",
         "opacity": 0.5})
@@ -20,8 +20,12 @@ export function pernoite(q, x, y, z) {
     $("#" + y).css('visibility', 'visible')
     $("#" + y).val('Encerrar')
 
-    // $("#" + z).css('visibility', 'visible')
-    // $("#" + z).val('Cancelar Reserva')
+    if(t != 'btn pernoite'){
+        $("#" + z).css('visibility', 'hidden')
+        $("#" + z).val('Cancelar Reserva')
+    } 
+
+
 
     var tipoQuarto = $('#tipo' + q).text()
 

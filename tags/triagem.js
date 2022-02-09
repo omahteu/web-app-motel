@@ -5,6 +5,8 @@ import { limpeza } from "./limpeza.js"
 import { faxina } from "./faxina.js"
 import { index } from "./particao.js"
 
+var rota = 'rota'
+
 export function triagem(acao, quarto, x, y, z){
 
     switch(acao){
@@ -29,7 +31,7 @@ export function triagem(acao, quarto, x, y, z){
 
             break
         case "Iniciar Pernoite":
-            pernoite(quarto, x, y, z)
+            pernoite(quarto, rota, x, y, z)
             index()
             break
         case "Iniciar Locação":
