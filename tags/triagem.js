@@ -14,9 +14,11 @@ export function triagem(acao, quarto, x, y, z){
             confirm("Certeza que deseja encerrar" + quarto + "?")
             desfazer(quarto, x, y, z)
             break
+
         case "Cancelar Reserva":
             desfazer(quarto, x, y, z)
             break
+
         case "Encerrar":
 
             if (confirm("Deseja encerrar o quarto " + quarto + "?") == true) {
@@ -30,16 +32,31 @@ export function triagem(acao, quarto, x, y, z){
               }
 
             break
+
         case "Iniciar Pernoite":
             pernoite(quarto, rota, x, y, z)
             index()
             break
-        case "Iniciar Locação":
-            locado(quarto, x, y, z)
+
+        case "Alterar P/ Pernoite":
+            pernoite(quarto, rota, x, y, z)
+            index()
             break
+
+        case "Iniciar Locação":
+            locado(quarto, rota, x, y, z)
+            index()
+            break
+
+        case 'Alterar P/ Locação':
+            locado(quarto, rota, x, y, z)
+            index()
+            break
+
         case "Iniciar Limpeza":
             limpeza(quarto, x, y, z)
             break
+
         case "Iniciar Faxina":
             faxina(quarto, x, y, z)
             break

@@ -6,8 +6,6 @@ $(".pernoite").click(function(){
     var quarto = $(this).attr('name')
     var rota = $(this).attr('class')
 
-    console.log(rota)
-
     switch(quarto){
         case '1':
             var flags = modos.slice(0, 3)

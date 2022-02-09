@@ -25,8 +25,6 @@ export function pernoite(q, t, x, y, z) {
         $("#" + z).val('Cancelar Reserva')
     } 
 
-
-
     var tipoQuarto = $('#tipo' + q).text()
 
     switch (tipoQuarto){

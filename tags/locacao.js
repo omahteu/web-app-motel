@@ -1,6 +1,6 @@
 import { precos } from "../boxes/box.js";
 
-export function locado(q, x, y, z) {
+export function locado(q, t,  x, y, z) {
     $("#quarto" + q).css({
         "background-color": "#FF0000",
         "opacity": 0.5})
@@ -20,8 +20,10 @@ export function locado(q, x, y, z) {
     $("#" + y).css('visibility', 'visible')
     $("#" + y).val('Encerrar')
 
-    // $("#" + z).css('visibility', 'visible')
-    // $("#" + z).val('Cancelar Reserva')
+    if(t != 'btn locado'){
+        $("#" + z).css('visibility', 'hidden')
+        $("#" + z).val('Cancelar Reserva')
+    } 
 
     var tipoQuarto = $('#tipo' + q).text()
 
