@@ -21,6 +21,8 @@ for (const property in produtos) {
     indexes.push(property)
 }
 
+console.log(indexes)
+
 indexes.forEach(function(item){
     $('#cod').append('<option>' + item + '</option>');
 });
